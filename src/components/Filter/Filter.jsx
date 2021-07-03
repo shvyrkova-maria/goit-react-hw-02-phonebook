@@ -11,6 +11,7 @@ function Filter({ filter, onChange }) {
       value={filter}
       debounceTimeout={700}
       onChange={onChange}
+      placeholder="Search"
     />
   );
 }

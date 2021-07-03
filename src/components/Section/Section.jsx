@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { SectionWrap, SectionTitle } from 'components/Section/Section.styled';
 
 function Section({ title, children }) {
   return (
-    <section>
-      <h2>{title}</h2>
+    <SectionWrap>
+      <SectionTitle>{title}</SectionTitle>
       {children}
-    </section>
+    </SectionWrap>
   );
 }
 
