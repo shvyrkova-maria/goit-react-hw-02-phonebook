@@ -20,13 +20,8 @@ class ContactsForm extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    const contactId = nanoid(3);
     const { name, number } = this.state;
-
-    console.log(this.props.contacts);
-    console.log({ id: contactId, name, number });
-    console.log([...this.props.contacts, { id: contactId, name, number }]);
-
+    this.props.onSubmit({ id: nanoid(3), name, number });
     this.formReset();
   };
 
@@ -51,6 +46,7 @@ class ContactsForm extends Component {
             placeholder="Name"
             title="Имя может состоять только из букв, апострофа, тире и пробелов. Например Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan и т. п."
             onChange={this.handleChange}
+            value={this.state.name}
             required
           />
         </label>
@@ -65,6 +61,7 @@ class ContactsForm extends Component {
             pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
             placeholder="+38 (000) 000-00-00"
             title="Номер телефона должен состоять цифр и может содержать пробелы, тире, круглые скобки и может начинаться с +"
+            value={this.state.number}
             onChange={this.handleChange}
             required
           />

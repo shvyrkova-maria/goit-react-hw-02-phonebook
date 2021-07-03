@@ -1,4 +1,4 @@
-function ContactsList({ contacts }) {
+function ContactsList({ contacts, onDeleteClick }) {
   return (
     <ul>
       {contacts.map(({ id, name, number }) => {
@@ -6,7 +6,9 @@ function ContactsList({ contacts }) {
           <li key={id}>
             <span>{name}</span>
             <span>{number}</span>
-            <button type="button">Delete</button>
+            <button type="button" onClick={() => onDeleteClick(id)}>
+              Delete
+            </button>
           </li>
         );
       })}

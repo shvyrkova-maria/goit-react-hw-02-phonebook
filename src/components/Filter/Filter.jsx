@@ -2,17 +2,15 @@
 import { nanoid } from 'nanoid';
 import { DebounceInput } from 'react-debounce-input';
 
-function Filter() {
-  let filterInputId = nanoid(3); //??
+function Filter({ filter, onChange }) {
   return (
     <DebounceInput
-      id={`id-${filterInputId}`}
+      id={`id-${nanoid(3)}`}
       type="text"
       name="name"
+      value={filter}
       debounceTimeout={700}
-      // pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
-      // placeholder="Name"
-      // title="Имя может состоять только из букв, апострофа, тире и пробелов. Например Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan и т. п."
+      onChange={onChange}
     />
   );
 }
