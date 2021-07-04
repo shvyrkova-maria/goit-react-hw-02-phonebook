@@ -58,9 +58,18 @@ export default class App extends Component {
         </Section>
         <Section title="Contacts">
           <Filter filter={this.state.filter} onChange={getFilterValue} />
+
           <ContactsList contacts={filtered} onDeleteClick={deleteContact} />
         </Section>
       </Container>
     );
   }
 }
+
+//  {
+//    filtered.length === 0 ? (
+//      <p>couldn't find any matches</p>
+//    ) : (
+//      <ContactsList contacts={filtered} onDeleteClick={deleteContact} />
+//    );
+//  }

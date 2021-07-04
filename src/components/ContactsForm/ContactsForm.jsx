@@ -1,10 +1,10 @@
 import { Component } from 'react';
 import { nanoid } from 'nanoid';
-import { DebounceInput } from 'react-debounce-input';
 import {
   Form,
   Button,
   Label,
+  Input,
 } from 'components/ContactsForm/ContactsForm.styled';
 
 const INITIAL_STATE = {
@@ -19,6 +19,7 @@ class ContactsForm extends Component {
 
   handleChange = event => {
     const { name, value } = event.target;
+    console.log(name, value);
     this.setState({ [name]: value });
   };
 
@@ -42,7 +43,7 @@ class ContactsForm extends Component {
     return (
       <Form onSubmit={handleSubmit}>
         <Label htmlFor={`id-${nameInputId}`}>Name</Label>
-        <DebounceInput
+        <Input
           id={`id-${nameInputId}`}
           type="text"
           name="name"
@@ -56,7 +57,7 @@ class ContactsForm extends Component {
         />
 
         <Label htmlFor={`id-${phoneInputId}`}>Number</Label>
-        <DebounceInput
+        <Input
           id={`id-${phoneInputId}`}
           type="tel"
           name="number"
