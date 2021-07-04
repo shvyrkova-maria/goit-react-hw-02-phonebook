@@ -1,4 +1,3 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import { SectionWrap, SectionTitle } from 'components/Section/Section.styled';
 
@@ -13,7 +12,7 @@ function Section({ title, children }) {
 
 Section.propTypes = {
   title: PropTypes.string.isRequired,
-  children: PropTypes.node,
+  children: PropTypes.node.isRequired,
 };
 
 export default Section;

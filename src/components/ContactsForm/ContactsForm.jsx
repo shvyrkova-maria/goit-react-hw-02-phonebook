@@ -6,7 +6,6 @@ import {
   Button,
   Label,
 } from 'components/ContactsForm/ContactsForm.styled';
-// import PropTypes from 'prop-types';
 
 const INITIAL_STATE = {
   name: '',
@@ -37,9 +36,11 @@ class ContactsForm extends Component {
   render() {
     let nameInputId = nanoid(3);
     let phoneInputId = nanoid(3);
+    const { handleSubmit, handleChange } = this;
+    const { name, number } = this.state;
 
     return (
-      <Form onSubmit={this.handleSubmit}>
+      <Form onSubmit={handleSubmit}>
         <Label htmlFor={`id-${nameInputId}`}>Name</Label>
         <DebounceInput
           id={`id-${nameInputId}`}
@@ -49,8 +50,8 @@ class ContactsForm extends Component {
           pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
           placeholder="Name"
           title="Имя может состоять только из букв, апострофа, тире и пробелов. Например Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan и т. п."
-          onChange={this.handleChange}
-          value={this.state.name}
+          onChange={handleChange}
+          value={name}
           required
         />
 
@@ -63,8 +64,8 @@ class ContactsForm extends Component {
           pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
           placeholder="+38 (000) 000-00-00"
           title="Номер телефона должен состоять цифр и может содержать пробелы, тире, круглые скобки и может начинаться с +"
-          value={this.state.number}
-          onChange={this.handleChange}
+          value={number}
+          onChange={handleChange}
           required
         />
         <Button type="submit">Add contact</Button>

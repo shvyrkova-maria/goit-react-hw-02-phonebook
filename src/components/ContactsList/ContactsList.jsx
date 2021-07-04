@@ -1,9 +1,10 @@
+import PropTypes from 'prop-types';
+import { FaUser, FaPhoneAlt } from 'react-icons/fa';
 import {
   ContactsItem,
   ContactsDetails,
   Button,
 } from 'components/ContactsList/ContactsList.styled';
-import { FaUser, FaPhoneAlt } from 'react-icons/fa';
 
 function ContactsList({ contacts, onDeleteClick }) {
   return (
@@ -30,5 +31,10 @@ function ContactsList({ contacts, onDeleteClick }) {
     </ul>
   );
 }
+
+ContactsList.propTypes = {
+  contacts: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)),
+  onDeleteClick: PropTypes.func.isRequired,
+};
 
 export default ContactsList;

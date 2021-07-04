@@ -2,6 +2,7 @@
   --main-color: #7195ae;
   --accent-color: #5d5c61;
   --text-color: #fff;
+  --bg-hover-color: hsla(206, 27%, 56%, 0.1);
 }
 
 #root {
@@ -47,7 +48,7 @@ input::placeholder {
 input:hover,
 input:focus {
   outline: none;
-  background-color: hsla(206, 27%, 56%, 0.1);
+  background-color: var(--bg-hover-color);
   border: 1px solid var(--main-color);
 }
 

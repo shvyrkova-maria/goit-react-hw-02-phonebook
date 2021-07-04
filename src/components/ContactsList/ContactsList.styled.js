@@ -11,6 +11,9 @@ export const ContactsItem = styled.li`
   &:not(:last-child) {
     margin-bottom: 10px;
   }
+  &:hover {
+    background-color: var(--bg-hover-color);
+  }
 `;
 
 export const ContactsDetails = styled.p`
@@ -29,14 +32,14 @@ export const Button = styled.button`
   padding: 8px 12px;
   font-size: 12px;
   font-weight: 700;
-  color: var(--accent-color);
+  color: var(--text-color);
   text-transform: uppercase;
+  background-color: lightslategray;
   border-radius: 5px;
   border: 1px solid transparent;
   cursor: pointer;
   &:hover,
   &:focus {
-    color: var(--main-color);
     box-shadow: 4px 3px 12px -1px var(--accent-color);
   }
 `;

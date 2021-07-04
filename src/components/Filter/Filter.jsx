@@ -1,4 +1,4 @@
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { nanoid } from 'nanoid';
 import { DebounceInput } from 'react-debounce-input';
 
@@ -16,8 +16,9 @@ function Filter({ filter, onChange }) {
   );
 }
 
-// Input.propTypes = {
-//   children: PropTypes.node.isRequired,
-// };
+Filter.propTypes = {
+  filter: PropTypes.string,
+  onChange: PropTypes.func.isRequired,
+};
 
 export default Filter;

@@ -20,14 +20,14 @@ export const Button = styled.button`
   padding: 12px 12px;
   font-size: 12px;
   font-weight: 700;
-  color: var(--accent-color);
+  color: var(--text-color);
+  background-color: lightslategray;
   text-transform: uppercase;
   border-radius: 5px;
   border: 1px solid transparent;
   cursor: pointer;
   &:hover,
   &:focus {
-    color: var(--main-color);
     box-shadow: 4px 3px 12px -1px var(--accent-color);
   }
 `;
