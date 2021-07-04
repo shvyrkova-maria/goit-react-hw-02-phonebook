@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/shvyrkova-maria/goit-react-hw-02-phonebook/static/css/main.39622ccb.chunk.css",
-    "main.js": "/shvyrkova-maria/goit-react-hw-02-phonebook/static/js/main.f913bd72.chunk.js",
-    "main.js.map": "/shvyrkova-maria/goit-react-hw-02-phonebook/static/js/main.f913bd72.chunk.js.map",
+    "main.js": "/shvyrkova-maria/goit-react-hw-02-phonebook/static/js/main.9f32dd68.chunk.js",
+    "main.js.map": "/shvyrkova-maria/goit-react-hw-02-phonebook/static/js/main.9f32dd68.chunk.js.map",
     "runtime-main.js": "/shvyrkova-maria/goit-react-hw-02-phonebook/static/js/runtime-main.e758a975.js",
     "runtime-main.js.map": "/shvyrkova-maria/goit-react-hw-02-phonebook/static/js/runtime-main.e758a975.js.map",
     "static/css/2.bc922b9c.chunk.css": "/shvyrkova-maria/goit-react-hw-02-phonebook/static/css/2.bc922b9c.chunk.css",
@@ -18,6 +18,6 @@
     "static/css/2.bc922b9c.chunk.css",
     "static/js/2.fda1c309.chunk.js",
     "static/css/main.39622ccb.chunk.css",
-    "static/js/main.f913bd72.chunk.js"
+    "static/js/main.9f32dd68.chunk.js"
   ]
 }
