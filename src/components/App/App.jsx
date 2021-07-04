@@ -3,7 +3,7 @@ import Section from 'components/Section/Section';
 import ContactsForm from 'components/ContactsForm/ContactsForm';
 import ContactsList from 'components/ContactsList/ContactsList';
 import Filter from 'components/Filter/Filter';
-import { Container } from './App.styled';
+import { Container } from 'components/App/App.styled';
 
 export default class App extends Component {
   state = {
