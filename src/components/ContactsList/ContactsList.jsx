@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { FaUser, FaPhoneAlt } from 'react-icons/fa';
 import {
+  Contacts,
   ContactsItem,
   ContactsDetails,
   Button,
@@ -8,7 +9,7 @@ import {
 
 function ContactsList({ contacts, onDeleteClick }) {
   return (
-    <ul>
+    <Contacts>
       {contacts.map(({ id, name, number }) => {
         return (
           <ContactsItem key={id}>
@@ -28,7 +29,7 @@ function ContactsList({ contacts, onDeleteClick }) {
           </ContactsItem>
         );
       })}
-    </ul>
+    </Contacts>
   );
 }
 

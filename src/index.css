@@ -36,7 +36,6 @@ input {
   width: 300px;
   padding: 10px 12px;
   font-size: 14px;
-  margin-bottom: 15px;
   border: 1px solid var(--accent-color);
   border-radius: 5px;
 }

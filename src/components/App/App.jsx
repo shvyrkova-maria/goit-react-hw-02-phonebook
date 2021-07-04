@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import Section from 'components/Section/Section';
-import ContactsForm from 'components/ContactsForm/ContactsForm';
+// import ContactsForm from 'components/ContactsForm/ContactsForm';
+import ContactsFormFormik from 'components/ContactsFormFormik/ContactsFormFormik'; //test
 import ContactsList from 'components/ContactsList/ContactsList';
 import Filter from 'components/Filter/Filter';
 import { Container } from 'components/App/App.styled';
@@ -54,22 +55,14 @@ export default class App extends Component {
     return (
       <Container>
         <Section title="Phonebook">
-          <ContactsForm onSubmit={addContact} />
+          {/* <ContactsForm onSubmit={addContact} /> */}
+          <ContactsFormFormik onSubmit={addContact} />
         </Section>
         <Section title="Contacts">
           <Filter filter={this.state.filter} onChange={getFilterValue} />
-
           <ContactsList contacts={filtered} onDeleteClick={deleteContact} />
         </Section>
       </Container>
     );
   }
 }
-
-//  {
-//    filtered.length === 0 ? (
-//      <p>couldn't find any matches</p>
-//    ) : (
-//      <ContactsList contacts={filtered} onDeleteClick={deleteContact} />
-//    );
-//  }

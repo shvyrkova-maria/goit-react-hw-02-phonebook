@@ -1,5 +1,9 @@
 import styled from '@emotion/styled/macro';
 
+export const Contacts = styled.ul`
+  margin-top: 15px;
+`;
+
 export const ContactsItem = styled.li`
   display: flex;
   align-items: center;
